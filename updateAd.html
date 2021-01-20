@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Create your advertisement</title>
+    <link rel="stylesheet" href="myCSS.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  </head>
+  <body>
+
+    <div class="container">
+      <div class="row">
+        <div class="col-md-2 col-lg-2 col-sm-2">
+        </div>
+    
+        <div class="col-md-8 col-lg-8 col-sm-8">
+          <h1 class='homeBanner'>Create your Advertisement</h1>
+          <form class="largeForm" action="createAdLogged.php" method="post" enctype="multipart/form-data">
+
+            <table>
+      
+              <tr>
+      
+                <td></td>
+      
+                <td><input class="formText" type="text" name="adTitle" value="" placeholder="Title"></td>
+              </tr>
+              <tr>
+      
+                <td></td>
+      
+                <td>
+                  <select class="formText" name="catagory">
+                    <option value="">Catagory</option>
+      
+                    <optgroup label="cat1">
+                      <option value="cat1.1">Cat1.1</option>
+                      <option value="cat1.2">Cat1.2</option>
+                      <option value="cat1.3">Cat1.3</option>
+                      <option value="cat1.4">Cat1.4</option>
+                    </optgroup>
+      
+                    <optgroup label="cat2">
+                      <option value="cat2.1">Cat2.1</option>
+                      <option value="cat2.2">Cat2.2</option>
+                      <option value="cat2.3">Cat2.3</option>
+                      <option value="cat2.4">Cat2.4</option>
+                    </optgroup>
+      
+      
+                  </select>
+                </td>
+              </tr>
+              <tr>
+                <td></td>
+                <td>
+                  <select class="formText" name="location">
+                    <option value="">Location</option>
+      
+                    <optgroup label="loc1">
+                      <option value="loc1.1">loc1.1</option>
+                      <option value="loc1.2">loc1.2</option>
+                      <option value="loc1.3">loc1.3</option>
+                      <option value="loc1.4">loc1.4</option>
+                    </optgroup>
+      
+                    <optgroup label="loc2">
+                      <option value="loc2.1">loc2.1</option>
+                      <option value="loc2.2">loc2.2</option>
+                      <option value="loc2.3">loc2.3</option>
+                      <option value="loc2.4">loc2.4</option>
+                    </optgroup>
+      
+                  </select>
+                </td>
+              </tr>
+              <tr>
+                <td></td>
+                <td><input type="number" name="price" value="" placeholder="Price"></td>
+              </tr>
+              <tr>
+                <td></td>
+                <td><input class="formText" type="checkbox" id="" name="nogotiable" value="">&nbsp Negotiable</td>
+              </tr>
+              <tr>
+                <td></td>
+                <td><textarea class="formText" name="discription" rows="8" cols="25" placeholder="Discription"></textarea></td>
+              </tr>
+      
+      
+              <tr>
+                <td></td>
+                <td>&nbsp &nbsp &nbsp   <input type="file" name="image1" value=""> </td>
+              </tr>
+              <tr>
+                <td></td>
+                <td>&nbsp &nbsp &nbsp   <input type="file" name="image2" value=""> </td>
+              </tr>
+              <tr>
+                <td></td>
+                <td>&nbsp &nbsp &nbsp   <input type="file" name="image3" value=""> </td>
+              </tr>
+              <tr>
+                <td></td>
+                <td>&nbsp &nbsp &nbsp   <input type="file" name="image4" value=""> </td>
+              </tr>
+              <tr>
+                <td></td>
+                <td>&nbsp &nbsp &nbsp   <input type="file" name="image5" value=""> </td>
+              </tr>
+              
+      
+              <tr>
+                <td></td>
+                <td><input type="submit" name="upload" value="Post Ad"></td>
+              </tr>
+      
+      
+            </table>
+      
+      
+      
+          </form>
+      
+        </div>
+    
+        <div class="col-md-2 col-lg-2 col-sm-2">
+        </div>
+    
+      </div>
+    
+    
+    
+    </div>
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+  </body>
+</html>

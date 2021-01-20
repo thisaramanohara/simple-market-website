@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<script type="text/javascript">
+
+  // Creating a cookie after the document is ready
+$(document).ready(function () {
+    createCookie("gfg", "GeeksforGeeks", "10");
+});
+
+// Function to create the cookie
+function createCookie(name, value, days) {
+    var expires;
+
+    if (days) {
+        var date = new Date();
+        date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+        expires = "; expires=" + date.toGMTString();
+    }
+    else {
+        expires = "";
+    }
+
+    document.cookie = escape(name) + "=" +
+        escape(value) + expires + "; path=/";
+}
+
+  function myFunction(clicked){
+
+
+
+  }
+
+</script>
+
+  <body>
+
+    <?php
+
+    session_start();
+
+    include 'details.php';
+        
+    $sql = "SELECT * FROM ads";
+
+    $result = $conn->query($sql);
+
+    while ($row = mysqli_fetch_array($result)){
+      $formId = $row["adUnique"];
+      echo '<div style="border:1px solid black;">';
+        //echo "<form action='oneAd.php' method='post'>";
+
+        echo '<input type="text" id="cat" value='.$formId.'>';
+    //----
+
+            echo "<table>";
+              echo "<tr>";
+
+              echo "<td>";
+                //echo "<a href='oneAd.php'>";
+                echo "<button id=".$formId." onclick='myFunction(this.id)'>";
+                //echo "<input type=button id=".$formId." onclick='myFunction(this.id)'>";
+              //echo "<button id=".$formId." onClick='myFunction(this.id)'>";
+
+                echo "<div>";
+                  echo '<img src=images/'.$row["image1"].' alt="Submit" width="200" height="200">';
+                  //echo '<img src="images/'.$row['image1'].'" width="200" height="200">';
+                echo "</div>";
+
+                echo "</button>";
+
+
+              echo "</td>";
+
+              echo "<td>";
+
+
+                echo $row['title'];
+                echo "<br>";
+                echo $row['price']." /-";
+                echo "<br>";
+                echo $row['location'];
+                //echo $row['firstName']." ". $row['lastName'];
+                echo "<br>";
+                echo $row['date'];
+              echo "</td>";
+
+              echo "</tr>";
+
+
+            echo "</table>";
+
+        //echo "</form>";
+
+
+
+
+    //------
+
+          /*echo "<tr>";
+          echo "<td>";
+          echo "<b>Name :</b>";
+          echo "</td>";
+          echo "<td>";
+          echo $row['firstName']." ". $row['lastName'];
+          echo "</td>";
+          echo "</tr>";
+
+          echo "<tr>";
+          echo "<td>";
+          echo "<b>Mobile Number :</b>";
+          echo "</td>";
+          echo "<td>";
+          echo $row['mobNumber'];
+          echo "</td>";
+          echo "</tr>";
+
+          echo "<tr>";
+          echo "<td>";
+          echo "<b>email :</b>";
+          echo "</td>";
+          echo "<td>";
+          echo $row['email'];
+          echo "</td>";
+          echo "</tr>";
+
+          echo "<tr>";
+          echo "<td>";
+          echo "<b>Date :</b>";
+          echo "</td>";
+          echo "<td>";
+          echo $row['date'];
+          echo "</td>";
+          echo "</tr>";
+
+          echo "<tr>";
+          echo "<td>";
+          echo "<b>Title :</b>";
+          echo "</td>";
+          echo "<td>";
+          echo $row['title'];
+          echo "</td>";
+          echo "</tr>";
+
+          echo "<tr>";
+          echo "<td>";
+          echo "<b>Catagory :</b>";
+          echo "</td>";
+          echo "<td>";
+          echo $row['catagory'];
+          echo "</td>";
+          echo "</tr>";
+
+          echo "<tr>";
+          echo "<td>";
+          echo "<b>Location :</b>";
+          echo "</td>";
+          echo "<td>";
+          echo $row['location'];
+          echo "</td>";
+          echo "</tr>";
+
+          echo "<tr>";
+          echo "<td>";
+          echo "<b>Price :</b>";
+          echo "</td>";
+          echo "<td>";
+          echo $row['price'];
+          echo "</td>";
+          echo "</tr>";
+
+          echo "<tr>";
+          echo "<td>";
+          echo "<b>Discription :</b>";
+          echo "</td>";
+          echo "<td style='width:200px;'>";
+          echo $row['discription'];
+          echo "</td>";
+          echo "</tr>";
+
+        echo "</table>";*/
+
+        /*echo "<div>";
+          echo '<img src="images/'.$row['image1'].'" width="200" height="200">';
+        echo "</div>";*/
+
+    echo "</div>";
+
+    echo "<br><br>";
+
+         }
+
+         $x = $_COOKIE["height"];
+         echo $x;
+
+
+    ?>
+
+
+
+  </body>
+</html>
